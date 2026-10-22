@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#1E1E1E"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Adicionar Source (JSON)"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_close_dialog"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="X"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#333333" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/et_source_url"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#2C2C2C"
+        android:hint="Cole a URL do arquivo .json..."
+        android:textColorHint="#888888"
+        android:textColor="#FFFFFF"
+        android:paddingHorizontal="12dp"
+        android:textSize="14sp"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btn_save_source"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="OK"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#00E676" />
+
+</LinearLayout>

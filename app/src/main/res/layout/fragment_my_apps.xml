@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    android:padding="16dp">
+
+    <!-- Barra de Pesquisa no Topo -->
+    <EditText
+        android:id="@+id/search_box"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#1E1E1E"
+        android:hint="Pesquisar apps..."
+        android:textColorHint="#888888"
+        android:textColor="#FFFFFF"
+        android:paddingHorizontal="16dp"
+        android:textSize="14sp"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="16dp" />
+
+    <!-- ScrollView para a lista de aplicativos cadastrados -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/search_box"
+        android:layout_above="@id/fab_button"
+        android:fillViewport="true"
+        android:layout_marginBottom="16dp">
+
+        <LinearLayout
+            android:id="@+id/apps_list_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+    </ScrollView>
+
+    <!-- Menu Pop-up que aparece acima do botão + -->
+    <LinearLayout
+        android:id="@+id/menu_popup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#1E1E1E"
+        android:padding="8dp"
+        android:visibility="gone"
+        android:layout_above="@id/fab_button"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="12dp">
+
+        <Button
+            android:id="@+id/btn_install_apk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Install apk"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#333333"
+            style="?android:attr/borderlessButtonStyle" />
+
+    </LinearLayout>
+
+    <!-- Botão Redondo com o "+" (Floating Action Button / Estilo Flutuante) -->
+    <Button
+        android:id="@+id/fab_button"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:text="+"
+        android:textSize="24sp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#00E676"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:gravity="center" />
+
+</RelativeLayout>
